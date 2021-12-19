@@ -1,0 +1,17 @@
+.SecBoard {
+  width: 46rem;
+  height: 55rem;
+  margin: auto;
+
+  display: grid;
+  grid-template-rows: repeat(3 ,15rem);
+  grid-template-columns: repeat(1 , 15rem);
+  grid-gap: 1.5rem;
+
+  &__row {
+    display: grid;
+    grid-template-rows: repeat(1 ,15rem);
+    grid-template-columns: repeat(3 , 15rem);
+    grid-gap: 1.5rem;
+  }
+}

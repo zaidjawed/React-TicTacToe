@@ -1,0 +1,69 @@
+.Cell {
+  position: relative;
+
+  &__btn {
+    width: 15rem;
+    height: 15rem;
+    outline: none;
+    border: 0.5rem solid $color-secondary-dark;
+    background-color: transparent;
+
+    font-size: 10rem;
+    font-weight: 100;
+    text-shadow: 0.5rem 0.5rem 0.7rem rgba($color-secondary-dark,0.3);
+    color: $color-secondary-dark;
+
+    position: relative;
+  }
+
+  &__btn:disabled {
+    background-color: rgba($color-gray-light-1,0.2);
+  }
+}
+
+.cross::before {
+  content: "X";
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 1.3rem;
+  left: 0rem;
+
+  opacity: 0;
+}
+
+.cross:hover::before {
+  opacity: 1;
+  animation: animate 1.5s linear infinite;
+}
+
+.circle::after {
+  content: "O";
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 1.3rem;
+  left: 0rem;
+
+  opacity: 0;
+}
+
+.circle:hover::after {
+  opacity: 1;
+  animation: animate 1.5s linear infinite;
+}
+
+
+@keyframes animate {
+	0% {
+    transform: scale(1);
+	}
+	50%{
+    transform: scale(1.2);
+	}
+	100%{
+    transform: scale(1);
+	}
+}
